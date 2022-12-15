@@ -1,0 +1,81 @@
+/*** font-family ****/
+$font-en-primary:'Rubik',
+sans-serif;
+$font-en-primary1:'Poppins',
+sans-serif;
+$font-en-primary2:'Roboto',
+sans-serif;
+$font-en-primary3:'Open Sans',
+sans-serif;
+$font-en-secondery:'Forum',
+cursive;
+$font-en-secondery1:'DM Sans',
+sans-serif;
+
+$bank-gothic-medium: 'bank_gothic_medium',
+'arial',
+sans-serif;
+$nexa-bold: 'nexa_bold',
+'arial',
+sans-serif;
+$nexa-light: 'nexa_light',
+'arial',
+sans-serif;
+$cocon-regular: 'cocon_regular',
+'arial',
+sans-serif;
+$shorif-jonota: 'shorif_jonota',
+sans-serif;
+$segoe_ui_regular: 'segoe_ui_regular',
+sans-serif;
+$segoe_ui_bold: 'segoe_ui_bold',
+sans-serif;
+$shorif-jonota: 'shorif_jonota',
+sans-serif;
+
+/**** containerr ***/
+$container-max-width:1250px;
+
+// MAT TOOLBAR, SIDENAV & LIST
+$toolbar-height: 85px;
+$toolbar-height-sm: 65px;
+$mat-sidenav-width: 295px;
+$list-hover-color: #c8d5e4;
+$list-text-color: #4a4a4a;
+$list-text-size: 15.5px;
+
+// BREAKPOINTS
+$max-tablet-width: 899px;
+
+// COLOR
+$color-light-gray: #777777;
+$color-primary: rgb(228, 197, 144);
+$color-primary-2: #273763;
+$heading-color:#39404a;
+$color-white:#fff;
+$sub-heading-color:#565765;
+$color-danger:#ff3838;
+$color-border:rgba(255,255,255,0.20);
+$text-color:#555555;
+$color-secondary: #09b409;
+$color-black:#000000;
+$color-black-div:#171718;
+$color-yellow: #ffab10;
+$icon-default-color: #FFFFFF;
+$table-bg-color: #FBAE01;
+$table-text-color: #6a4a02;
+$table-sm-color: #a59688;
+$box-shadow-primary:0px 15px 35px 0px rgba(0, 0, 0, 0.1);
+$color-one: rgb(167, 167, 167);
+$color-two: rgb(14, 13, 11);
+$color-three: rgb(89, 86, 83);
+$color-four: rgb(23, 24, 25);
+$color-five: rgb(14, 13, 12);
+$color-six: rgb(26, 27, 28);
+$color-seven: rgb(21, 22, 22);
+$color-eight: rgb(18, 17, 17);
+$header-fixed-bg:#202020;
+// FONT SIZE
+$font-title-size: 38px;
+$font-title-md-size: 18px;
+$font-dis-size: 16px;

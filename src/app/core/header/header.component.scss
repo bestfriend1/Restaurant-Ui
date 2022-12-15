@@ -1,0 +1,349 @@
+@import'src/theme/variables';
+.header-area{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 200;
+    width: 100%;
+}
+.header-top{
+    display: block;
+    padding: 18px 15px 15px 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.20);
+}
+.header-top-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    max-width: 1760px;
+    width: 100%;
+    margin: auto;
+}
+.header-top-left{
+    display: block;
+}
+.header-top-left ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+.header-top-left ul li{
+    display: inline-flex;
+    padding-right: 50px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    color: $color-white;
+    font-family: $font-en-secondery1;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    position: relative;
+}
+.header-top-left ul li i{
+    font-size: 14px;
+}
+.header-top-right{
+    display: block;
+}
+.header-top-right ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+}
+.header-top-right ul li{
+    display: inline-block;
+    padding-right: 50px;
+    position: relative;
+}
+.header-top-right ul li::after{
+    content: "";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid $color-primary;
+    transform: translateY(-50%) rotate(45deg);
+}
+.header-top-right ul li:last-child::after{
+    display: none;
+}
+.header-top-left ul li::after{
+    content: "";
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid $color-primary;
+    transform: translateY(-50%) rotate(45deg);
+}
+.header-top-left ul li:last-child::after{
+    display: none;
+}
+.header-top-right ul li a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    color: $color-white;
+    font-family: $font-en-secondery1;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    transition: all 0.3s linear;
+    letter-spacing: 0.3px;
+}
+
+.header-top-right ul li a:hover{
+    color: $color-primary;
+}
+.header-top-right ul li a i{
+    font-size: 14px;
+}
+.header-top-left ul li:last-child, .header-top-right ul li:last-child{
+    padding: 0px;
+}
+.header-menu-area{
+    display: block;
+    padding: 25px 15px;
+}
+.header-fixed{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    padding: 20px 15px;
+    z-index: 200;
+    background-color: $header-fixed-bg;
+    animation:headerTop 0.2s ease-in;
+    transition: all 0.3s linear;
+}
+@keyframes headerTop{
+    0%{
+        top: -20px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+.header-menu-main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 1760px;
+    margin: auto;
+}
+.menu-area{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+    width: 100%;
+}
+.logo{
+    display: block;
+}
+.logo img{
+    width: auto;
+    object-fit: contain;
+    height: 50px;
+}
+.menu{
+    display: block;
+    width: 100%;
+}
+.menu ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    text-align: right;
+}
+.menu ul li{
+    display: inline-block;
+    margin-right: 40px;
+}
+.menu ul li:last-child{
+    margin: 0px;
+}
+.menu ul li a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-end;
+    font-family: $font-en-secondery1;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s linear;
+    padding-bottom: 8px;
+    position: relative;
+    letter-spacing: 1px;
+    &.active{
+        color: $color-primary;
+    }
+}
+.menu ul li a::after{
+    width: 100%;
+    height: 3px;
+    content: "";
+    border-top: 1px solid $color-primary;
+    border-bottom: 1px solid $color-primary;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.2s linear;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+.menu ul li .active::after{
+    transform: scaleX(1);
+}
+.menu ul li a:hover{
+    color: $color-primary;
+}
+.menu ul li a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+}
+
+.menu-btn{
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    padding-right: 10px;
+}
+.menu-btn ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    width: 100%;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.menu-btn ul li{
+}
+.menu-btn ul li .bar{
+    width: 31px;
+    cursor: pointer;
+}
+.bar span{
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    display: block;
+    margin-bottom: 6px;
+}
+.bar span:last-child{
+    margin: 0px;
+}
+.menu-btn .btn{
+    background-color: $color-primary;
+    color: $color-two;
+}
+.menu-btn .btn::after{
+    background-color: #0E0D0B;
+}
+.menu-btn.btn:hover::after{
+    top: -40%;
+}
+.menu-btn .btn:hover{
+    color: #fff;
+}
+.bar .line1{
+    width: 100%;
+    animation:line1Animate 1s linear infinite;
+}
+.bar .line2{
+    width: 70%;
+    animation:line2Animate 1s linear infinite;
+    animation-delay: 0.5s;
+}
+.bar .line3{
+    width: 40%;
+    animation:line3Animate 1s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes line1Animate{
+    0%{
+        width: 100%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes line2Animate{
+    0%{
+        width: 100%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@keyframes line3Animate{
+    0%{
+        width: 100%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+@media(max-width:1300px){
+    .menu ul li{
+        margin-right: 25px;
+    }
+    .menu-area{
+        gap: 30px;
+    }
+    .menu-btn{
+        padding: 0px;
+    }
+    .menu-btn ul{
+        gap: 30px;
+    }
+}
+
+@media(max-width:1150px){
+    .menu{
+        display: none;
+    }
+}
+@media(max-width:990px){
+    .header-top-left{
+        display: none;
+    }
+    .header-top-right{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+}
+@media(max-width:600px){
+    .menu-btn ul li:first-child{
+        display: none;
+    }
+    .logo img{
+        height: 45px;
+        object-fit: contain;
+    }
+    .header-top{
+        display: none;
+    }
+}

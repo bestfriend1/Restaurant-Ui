@@ -1,0 +1,40 @@
+{
+  "data":[
+      {
+          "_id":"1",
+          "productImg":"./assets/images/temp/products/menu-image-11.jpg",
+          "productName":"Greek Salad",
+          "productTag":"",
+          "productDescription":"Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.",
+          "productPrice":"$25.50",
+          "routerLink":"#"
+      },
+      {
+          "_id":"2",
+          "productImg":"./assets/images/temp/products/menu-image-12.jpg",
+          "productName":"Tokusen Wagyu",
+          "productTag":"New",
+          "productDescription":"Tomatoes, green bell pepper, sliced cucumber onion, olives...",
+          "productPrice":"$45.00",
+          "routerLink":"#"
+      },
+      {
+          "_id":"3",
+          "productImg":"./assets/images/temp/products/menu-image-13.jpg",
+          "productName":"Butternut Pumpkin",
+          "productTag":"Seasonal",
+          "productDescription":"Avocados with crab meat, red onion, crab salad stuffed bell pepper...",
+          "productPrice":"$15.00",
+          "routerLink":"#"
+      },
+      {
+          "_id":"4",
+          "productImg":"./assets/images/temp/products/menu-image-14.jpg",
+          "productName":"Opu Fish",
+          "productTag":"",
+          "productDescription":"Vegetables, cheeses, ground meats, tomato sauce, seasonings...",
+          "productPrice":"$12.00",
+          "routerLink":"#"
+      }
+  ]
+}

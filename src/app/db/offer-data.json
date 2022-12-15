@@ -1,0 +1,28 @@
+{
+    "offerData": [
+        {
+            "_id": "1",
+            "offerImage": "./assets/images/temp/products/offer-image-1.jpg",
+            "offerName": "Breakfast",
+            "offerCategory":"breakfast",
+            "routerLink": "#",
+            "offerQuantity": "2"
+        },
+        {
+            "_id": "2",
+            "offerImage": "./assets/images/temp/products/offer-image-2.jpg",
+            "offerName": "Appetizers",
+            "routerLink": "#",
+            "offerCategory":"appetizers",
+            "offerQuantity": "10"
+        },
+        {
+            "_id": "1",
+            "offerImage": "./assets/images/temp/products/offer-image-3.jpg",
+            "offerName": "Drinks",
+            "routerLink": "#",
+            "offerCategory":"drinks",
+            "offerQuantity": "5"
+        }
+    ]
+}

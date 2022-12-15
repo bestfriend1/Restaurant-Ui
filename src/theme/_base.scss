@@ -1,0 +1,122 @@
+@import'./variables';
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    display: block;
+    width: 100%;
+    user-select: none;
+    height: auto;
+    box-sizing: border-box;
+    font-family:$font-en-primary;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0px;
+    overflow-x: hidden;
+    -webkit-overflow-x: hidden;
+    -o-overflow-x: hidden;
+    -moz-overflow-x: hidden;
+    margin: 0px;
+    background-color: $header-fixed-bg;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+a,button,img{
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: none;
+    color: #000;
+}
+h1,h2,h3,h4,h5,h6,p{
+    display: block;
+    margin: 0px!important;
+
+}
+img{
+    display: block;
+    width: 100%;
+}
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.container{
+    display: block;
+    max-width: $container-max-width;
+    width: 100%;
+    margin: auto;
+}
+// @media(max-width:1400px){
+//     .container{
+//         max-width: 1180px;
+//     }
+// }
+// @media(max-width:1200px){
+//     .container{
+//         max-width: 960px;
+//     }
+// }
+// @media(max-width:990px){
+//     .container{
+//         max-width: 720px;
+//     }
+// }
+// @media(max-width:768px){
+//     .container{
+//         max-width: 540px;
+//     }
+// }
+/**** global style start ****/
+.btn-area{
+    margin-top: 40px!important;
+}
+.btn{
+    display: block;
+    background-color:transparent;
+    color: $color-primary;
+    font-family: $font-en-secondery1;
+    font-weight: 700;
+    border: 2px solid $color-primary;
+    margin: auto;
+    padding: 15px 45px;
+    letter-spacing: 1.5px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.btn span{
+    display: block;
+}
+.btn::after{
+    content: "";
+    display: block;
+    width: 200%;
+    height: 200%;
+    position: absolute;
+    top: -200%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-primary;
+    z-index: -10;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+.btn:hover::after{
+    top: -40%;
+}
+.btn:hover{
+    color: $color-two;
+}

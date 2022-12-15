@@ -1,0 +1,458 @@
+<div class="banner-section">
+      <!--banner-start-->
+      <div class="banner-area">
+            <div class="container">
+                  <div class="banner-main">
+                        <div class="banner-top">
+                              <h4>Delightful Experience</h4>
+                              <img src="./assets/images/brand/svg/separator.svg" alt="">
+                        </div>
+                        <div class="banner-title">
+                              <h2>Flavors Inspired by the Seasons</h2>
+                              <p>Come with family & feel the joy of mouthwatering food.</p>
+                              <div class="btn-area">
+                                    <button class="btn">View Our Menu</button>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div><!--banner-end-->
+
+      <!--rotate-icon-animation-->
+      <div class="banner-rotate-animation">
+            <div class="rotate-ani-content">
+                  <div class="rotate-ani-icon">
+                        <img src="./assets/images/brand/png/book-icon-1.png" alt="">
+                  </div>
+                  <div class="rotate-ani-text">
+                        <span>Book A Table</span>
+                  </div>
+            </div>
+      </div>
+</div>
+
+
+<!----section1-->
+<div class="section1">
+      <div class="container">
+            <div class="section1-title">
+                  <h4>falvors for royalty</h4>
+                  <img src="./assets/images/brand/svg/separator.svg" alt="">
+                  <h2>We Offer Top Notch</h2>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the
+                        industrys standard dummy text ever.</p>
+            </div>
+            <!---section1-main-->
+            <div class="section1-main">
+                  <!---offer-card-->
+                  <div class="offer-card" *ngFor="let data of offerDataArr" [id]="data?._id">
+                        <div class="offer-card-img">
+                              <img src="{{data?.offerImage}}" alt="{{data?.offerName}}">
+                        </div>
+                        <div class="offer-card-body">
+                              <h3>{{data?.offerName}}</h3>
+                              <a [routerLink]="['',data?._id]">View Menu</a>
+                        </div>
+                  </div><!--end-->
+            </div>
+      </div>
+      <!--shape-->
+      <div class="section1-shape1">
+            <img src="./assets/images/brand/png/bg-1.png" alt="">
+      </div>
+      <div class="section1-shape2">
+            <img src="./assets/images/brand/png/bg-2.png" alt="">
+      </div>
+</div>
+
+
+<!---section2-->
+<div class="section2">
+      <div class="container">
+            <div class="section2-main">
+                  <!---section2-left-->
+                  <div class="section2-left">
+                        <div class="section2-left-title">
+                              <h4>OUR STORY</h4>
+                              <img src="./assets/images/brand/svg/separator.svg" alt="">
+                              <h2>Every Flavor Tells a Story</h2>
+                              <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum
+                                    has been the industrys standard dummy text ever since the when an unknown printer
+                                    took a galley of type and scrambled it to make a type specimen book It has survived
+                                    not only five centuries, but also the leap into.</p>
+                        </div>
+                        <div class="section2-left-contact">
+                              <h3>Book Through Call</h3>
+                              <a href="tel:+80 (400) 123 4567">+80 (400) 123 4567</a>
+                        </div>
+                        <div class="section2-btn-area">
+                              <button class="btn">Read More</button>
+                        </div>
+                  </div><!---end-->
+                  <!--section2-right-->
+                  <div class="section2-right">
+                        <div class="section2-right-main">
+                              <div class="section2-circle">
+                                    <div class="section2-circle-rotate-text">
+                                          <img src="./assets/images/brand/png/badge-1-bg.png" alt="">
+                                    </div>
+                                    <div class="section2-circle-since">
+                                          <img src="./assets/images/brand/png/badge-1.png" alt="">
+                                    </div>
+                              </div>
+                              <div class="section2-big-img" #bigImg>
+                                    <img src="./assets/images/temp/image/image-1.jpg" alt="">
+                              </div>
+                              <div class="section2-small-img" #smallImg>
+                                    <img src="./assets/images/temp/image/image-2.jpg" alt="">
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <!---shape-->
+      <div class="section2-shape">
+            <img src="./assets/images/brand/png/bg-3.png" alt="">
+      </div>
+</div>
+
+<div class="section3">
+      <div class="">
+            <div class="section3-main">
+                  <!---section3-left-->
+                  <div class="section3-left">
+                        <div class="section3-left-img">
+                              <div class="left-res-img">
+                                    <img src="./assets/images/temp/banner/image-1.jpg" alt="">
+                              </div>
+                        </div>
+                  </div><!---end-->
+                  <!---section3-right-->
+                  <div class="section3-right">
+                        <div class="section3-right-info">
+                              <div class="section3-title">
+                                    <h4>SPECIAL DISH</h4>
+                                    <img src="./assets/images/brand/svg/separator.svg" alt="">
+                                    <h2>Lobster Tortellini</h2>
+                                    <p>Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem
+                                          Ipsum has been the industrys standard dummy text ever since the when an
+                                          unknown printer took a galley of type.</p>
+                              </div>
+                              <div class="section3-price">
+                                    <h3><span>$40.00</span> $20.00</h3>
+                              </div>
+                              <div class="section3-btn-area">
+                                    <button class="btn">View All Menu</button>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="shape3">
+                  <img src="./assets/images/brand/png/bg-4.png" alt="">
+            </div>
+            <div class="shape4">
+                  <img src="./assets/images/brand/png/image-3.png" alt="">
+            </div>
+      </div>
+</div>
+
+<!-------------------------------------------section4----------------------------------------------->
+<div class="section4">
+      <div class="container">
+            <div class="section4-title">
+                  <h4>SPECIAL SELECTION</h4>
+                  <img src="./assets/images/brand/svg/separator.svg" alt="">
+                  <h2>Delicious Menu</h2>
+            </div>
+
+            <div class="section4-main">
+                  <div class="section4-filter">
+                        <ul>
+                              <li><button class="active">Morning</button></li>
+                              <li><button>Weekday Lunch</button></li>
+                              <li><button>Dinner</button></li>
+                              <li><button>Wines</button></li>
+                        </ul>
+                  </div>
+
+                  <div class="menu-area">
+                        <!------------------menu--------------------->
+                        <div class="menu-card" *ngFor="let menu of menuDataArr" [id]="menu?._id">
+                              <div class="menu-card-img">
+                                    <img [src]="menu?.menuImage" [alt]="menu?.menuName">
+                              </div>
+                              <div class="menu-card-body">
+                                    <div class="menu-title">
+                                          <div class="menu-title-left">
+                                                <div>
+                                                      <h3>{{menu?.menuName}}</h3>
+                                                </div>
+                                                <div *ngIf="menu?.menuTag">
+                                                      <span>{{menu?.menuTag}}</span>
+                                                </div>
+                                          </div>
+                                          <div class="menu-title-right">
+                                                <div class="menu-price">
+                                                      <span>{{menu?.menuPrice}}</span>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="menu-card-des">
+                                          <p>{{menu?.menuDescription}}</p>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="section4-btn-area">
+                  <h3>During winter daily from <span>7:00 pm</span> to <span>9:00 pm</span></h3>
+                  <button class="btn">View All Menu</button>
+            </div>
+      </div>
+      <!--shape-->
+      <div class="section4-shape1">
+            <img src="./assets/images/brand/png/bg-5.png" alt="">
+      </div>
+      <div class="section4-shape2">
+            <img src="./assets/images/brand/png/bg-6.png" alt="">
+      </div>
+</div>
+
+<!------section5-------->
+<div class="section5">
+      <div class="outer-container">
+            <div class="section5-main">
+                  <div class="section5-title">
+                        <h4>SPECIAL OFFER</h4>
+                        <img src="./assets/images/brand/svg/separator.svg" alt="">
+                        <h2>Best Specialties</h2>
+                  </div>
+
+                  <div class="section5-slide-area">
+                        <div class="section5-slide-area-main">
+                              <swiper [slidesPerView]="1" [spaceBetween]="10" [loop]="true" [autoplay]="true"
+                                    [navigation]="true" [breakpoints]="{
+                                          '600': {
+                                            slidesPerView: 2,
+                                            spaceBetween: 30
+                                          },
+                                          '900': {
+                                            slidesPerView: 3,
+                                            spaceBetween: 30
+                                          },
+                                          '1200': {
+                                             slidesPerView: 4,
+                                             spaceBetween: 40
+                                          }
+                                    }" class="mySwiper">
+                                    <ng-template swiperSlide *ngFor="let data of productArr">
+                                          <div class="product-card" [id]="data?._id">
+                                                <div class="product-img">
+                                                      <img [src]="data?.productImg" [alt]="data?.productName">
+                                                </div>
+                                                <div class="product-card-body">
+                                                      <a [routerLink]="[data?.routerLink]">{{data?.productName}}</a>
+                                                      <p>{{data?.productDescription}}</p>
+                                                      <div class="product-price">
+                                                            <h3>{{data?.productPrice}}</h3>
+                                                      </div>
+                                                </div>
+                                          </div>
+                                    </ng-template>
+                              </swiper>
+                        </div>
+                  </div>
+
+                  <div class="section5-btn-area">
+                        <button class="btn">View All Menu</button>
+                  </div>
+            </div>
+      </div>
+</div>
+
+<!---section6-->
+<div class="section8">
+      <div class="container">
+            <div class="section8-title">
+                  <h4>WHY CHOOSE US</h4>
+                  <img src="./assets/images/brand/svg/separator.svg" alt="">
+                  <h2>Our Strength</h2>
+            </div>
+
+            <div class="section8-main">
+
+                  <div class="strength-card">
+                        <div class="strentgh-icon">
+                              <img src="./assets/images/brand/png/why-icon-1.png" alt="">
+                        </div>
+                        <div class="strength-card-body">
+                              <h3>Hygienic Food</h3>
+                              <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                        </div>
+                  </div>
+
+                  <div class="strength-card">
+                        <div class="strentgh-icon">
+                              <img src="./assets/images/brand/png/why-icon-2.png" alt="">
+                        </div>
+                        <div class="strength-card-body">
+                              <h3>Fresh Environment</h3>
+                              <p>Lorem Ipsum is simply dummy printing and typesetting.</p>
+                        </div>
+                  </div>
+
+                  <div class="strength-card">
+                        <div class="strentgh-icon">
+                              <img src="./assets/images/brand/png/why-icon-3.png" alt="">
+                        </div>
+                        <div class="strength-card-body">
+                              <h3>Skilled Chefs</h3>
+                              <p>orem Ipsum is simply dummy printing and typesetting.</p>
+                        </div>
+                  </div>
+                  <div class="strength-card">
+                        <div class="strentgh-icon">
+                              <img src="./assets/images/brand/png/why-icon-2.png" alt="">
+                        </div>
+                        <div class="strength-card-body">
+                              <h3>Event & Party</h3>
+                              <p>orem Ipsum is simply dummy printing and typesetting.</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <div class="section8-shape">
+            <img src="./assets/images/brand/png/bg-8.png" alt="">
+      </div>
+</div>
+
+<!---section9-->
+<div class="section10">
+      <div class="container">
+            <div class="section8-title">
+                  <h4>EXPERIENCED TEAM</h4>
+                  <img src="./assets/images/brand/svg/separator.svg" alt="">
+                  <h2>Meet Our Chef</h2>
+            </div>
+            <!---section10-->
+            <div class="section10-main">
+                  <div class="chef-card">
+                        <div class="chef-img">
+                                 <img src="./assets/images/temp/products/chef/team-1.jpg" alt="">
+                                 <div class="chef-social">
+                                      <ul>
+                                           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                      </ul>
+                                 </div>
+                        </div>
+                        <div class="chef-card-body">
+                               <a href="#">Willium Joe</a>
+                               <span>MASTER CHEF</span>
+                               <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+                        </div>
+                  </div>
+
+                  <div class="chef-card" >
+                        <div class="chef-img">
+                                 <img src="./assets/images/temp/products/chef/team-2.jpg" alt="">
+                                 <div class="chef-social">
+                                      <ul>
+                                           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                      </ul>
+                                 </div>
+                        </div>
+                        <div class="chef-card-body">
+                               <a href="#">Steave Den</a>
+                               <span>MASTER CHEF</span>
+                               <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+                        </div>
+                  </div>
+
+                  <div class="chef-card">
+                        <div class="chef-img">
+                                 <img src="./assets/images/temp/products/chef/team-3.jpg" alt="">
+                                 <div class="chef-social">
+                                      <ul>
+                                           <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                           <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                      </ul>
+                                 </div>
+                        </div>
+                        <div class="chef-card-body">
+                               <a href="#">Lily Sopy</a>
+                               <span>MASTER CHEF</span>
+                               <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been the industrys.</p>
+                        </div>
+                  </div>
+            </div>
+      </div>
+      <div class="section10-shape">
+              <img src="./assets/images/brand/png/bg-21.png" alt="">
+      </div>
+</div>
+
+
+<!---section12-->
+<div class="section12">
+        <div class="container">
+            <div class="section8-title">
+                  <h4>RECENT UPDATES</h4>
+                  <img src="./assets/images/brand/svg/separator.svg" alt="">
+                  <h2>Upcoming Event</h2>
+            </div>
+            <div class="section12-main">
+                  
+                    <div class="event-card">
+                          <div class="event-img">
+                              <img src="./assets/images/temp/image/news-2.jpg" alt="">
+                              <div class="event-date">
+                                     <span>15/09/2022</span>
+                              </div>
+                          </div>
+                          <div class="event-card-body">
+                               <h4>FOOD, FLAVOUR</h4>
+                               <h3>Flavour so good you’ll try to eat with your eyes.</h3>
+                          </div>
+                    </div>
+
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="./assets/images/temp/image/news-1.jpg" alt="">
+                            <div class="event-date">
+                                   <span>08/09/2022</span>
+                            </div>
+                        </div>
+                        <div class="event-card-body">
+                             <h4>HEALTHY FOOD</h4>
+                             <h3>Flavour so good you’ll try to eat with your eyes.</h3>
+                        </div>
+                  </div>
+                  <div class="event-card">
+                        <div class="event-img">
+                            <img src="./assets/images/temp/image/news-3.jpg" alt="">
+                            <div class="event-date">
+                                   <span>03/09/2022</span>
+                            </div>
+                        </div>
+                        <div class="event-card-body">
+                             <h4>RECIPIE</h4>
+                             <h3>Flavour so good you’ll try to eat with your eyes.</h3>
+                        </div>
+                  </div>
+
+            </div>
+            <div class="section2-btn-area">
+                   <button class="btn">View Our Blog</button>
+            </div>
+        </div>
+</div>

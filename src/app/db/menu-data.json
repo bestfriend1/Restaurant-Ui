@@ -1,0 +1,58 @@
+{
+    "data":[
+        {
+            "_id":"1",
+            "menuImage":"./assets/images/temp/products/menu/menu-image-5.png",
+            "menuName":"Greek Salad",
+            "menuTag":"",
+            "menuDescription":"Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.",
+            "menuPrice":"$25.50",
+            "routerLink":"#"
+        },
+        {
+            "_id":"2",
+            "menuImage":"./assets/images/temp/products/menu/menu-image-8.png",
+            "menuName":"Tokusen Wagyu ",
+            "menuTag":"New",
+            "menuDescription":"Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices.",
+            "menuPrice":"$39.00",
+            "routerLink":"#"
+        },
+        {
+            "_id":"3",
+            "menuImage":"./assets/images/temp/products/menu/menu-image-6.png",
+            "menuName":"Lasagne",
+            "menuTag":"Seasonal",
+            "menuDescription":"Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices",
+            "menuPrice":"$10.00",
+            "routerLink":"#"
+        },
+        {
+            "_id":"4",
+            "menuImage":"./assets/images/temp/products/menu/menu-image-9.png",
+            "menuName":"Olivas Rellenas",
+            "menuTag":"",
+            "menuDescription":"Avocados with crab meat, red onion, crab salad stuffed red bell pepper and green bell pepper.",
+            "menuPrice":"$25.00",
+            "routerLink":"#"
+        },
+        {
+            "_id":"5",
+            "menuImage":"./assets/images/temp/products/menu/menu-image-7.png",
+            "menuName":"Butternut Pumpkin",
+            "menuTag":"",
+            "menuDescription":"Typesetting industry lorem Lorem Ipsum is simply dummy text of the priand.",
+            "menuPrice":"$10.00",
+            "routerLink":"#"
+        },
+        {
+            "_id":"6",
+            "menuImage":"./assets/images/temp/products/menu/menu-image-10.png",
+            "menuName":"Opu Fish",
+            "menuTag":"",
+            "menuDescription":"Vegetables, cheeses, ground meats, tomato sauce, seasonings and spices",
+            "menuPrice":"$49.00",
+            "routerLink":"#"
+        }
+    ]
+}
