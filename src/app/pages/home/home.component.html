@@ -1,19 +1,24 @@
 <div class="banner-section">
       <!--banner-start-->
-      <div class="banner-area" *ngFor="let data of bannerDataArr; index as i" [style.backgroundImage]="'url('+ data?.bannerImg +')'" [class]="slideIndex === i ? 'active-slide':'inactive-slide'">
+      <div class="banner-area" *ngFor="let data of bannerDataArr; index as i"
+            [style.backgroundImage]="'url('+ data?.bannerImg +')'"
+            [class]="slideIndex === i ? 'active-slide':'inactive-slide'">
             <div class="container">
                   <div class="banner-main">
                         <div class="banner-top" [class]="slideIndex === i ? 'banner-top-active':'banner-top-inactive'">
                               <h4>{{data?.bannerSubTitle}}</h4>
                               <img src="./assets/images/brand/svg/separator.svg" alt="">
                         </div>
-                        <div class="banner-title" >
-                              <div class="banner-title-main" [class]="slideIndex === i ? 'banner-title-main-active':'banner-title-main-inactive'">
+                        <div class="banner-title">
+                              <div class="banner-title-main"
+                                    [class]="slideIndex === i ? 'banner-title-main-active':'banner-title-main-inactive'">
                                     <h2>{{data?.bannerTitle}}</h2>
                                     <p>{{data?.bannerDescription}}</p>
                               </div>
-                              <div class="btn-area" [class]="slideIndex === i ? 'banner-btn-area-active':'banner-btn-area-inactive'">
-                                    <button class="btn" type="button" [routerLink]="[data?.routerLink]">View Our Menu</button>
+                              <div class="btn-area"
+                                    [class]="slideIndex === i ? 'banner-btn-area-active':'banner-btn-area-inactive'">
+                                    <button class="btn" type="button" [routerLink]="[data?.routerLink]">View Our
+                                          Menu</button>
                               </div>
                         </div>
                   </div>
@@ -33,10 +38,10 @@
       </div>
       <!--indicator-area-->
       <div class="banner-indicator-area">
-              <ul>
-                   <li class="prev"><span (click)="prevSlide()"><i class="fa fa-angle-left"></i></span></li>
-                   <li class="next"><span (click)="nextSlide()"><i class="fa fa-angle-right"></i></span></li>
-              </ul>
+            <ul>
+                  <li class="prev"><span (click)="prevSlide()"><i class="fa fa-angle-left"></i></span></li>
+                  <li class="next"><span (click)="nextSlide()"><i class="fa fa-angle-right"></i></span></li>
+            </ul>
       </div>
 </div>
 
@@ -339,6 +344,51 @@
 </div>
 
 <!---section9-->
+<div class="section9">
+      <div class="">
+            <div class="section9-main">
+                  <div class="section9-left-right">
+                        <div class="section9-left-right-info">
+                              <div>
+                                    <h4>BEST MENU</h4>
+                                    <h2>Special Dishes</h2>
+                                    <p>Lorem Ipsum is simply dummy printing.</p>
+                                    <a href="#">VIEW MENU</a>
+                              </div>
+                        </div>
+                        <div class="section9-left-right-img">
+                              <img src="./assets/images/temp/banner/featured-1.jpg" alt="">
+                        </div>
+                  </div>
+                  <div class="section9-midle">
+                        <div class="section9-midle-info">
+                              <div>
+                                    <h4>LATEST</h4>
+                                    <h2>Upcoming Events</h2>
+                                    <p>Simply dummy printing and setting.</p>
+                                    <a href="#">JOIN EVENT</a>
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="section9-left-right">
+                        <div class="section9-left-right-info">
+                              <div>
+                                    <h4>SELECTED</h4>
+                                    <h2>Chef Choice</h2>
+                                    <p>Dummy printing lorem Ipsum simply.</p>
+                                    <a href="#">VIEW MENU</a>
+                              </div>
+                        </div>
+                        <div class="section9-left-right-img">
+                              <img src="./assets/images/temp/banner/featured-3.jpg" alt="">
+                        </div>
+                  </div>
+            </div>
+      </div>
+</div>
+
+<!---section9-->
 <div class="section10">
       <div class="container">
             <div class="section8-title">
@@ -430,11 +480,11 @@
                         <p>A modern restaurant with a menu that will make your mouth water.</p>
                         <h4>WILLIUM JOE - MASTER CHEF</h4>
                         <div class="sml-box-rotate">
-                               <ul>
-                                     <li><span></span></li>
-                                     <li><span></span></li>
-                                     <li><span></span></li>
-                               </ul>
+                              <ul>
+                                    <li><span></span></li>
+                                    <li><span></span></li>
+                                    <li><span></span></li>
+                              </ul>
                         </div>
                   </div>
             </div>

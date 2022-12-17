@@ -27,18 +27,20 @@
     overflow: hidden;
     transform: scale(1);
     opacity: 1;
+    z-index: 10;
 }
 
 .inactive-slide {
     transform: scale(1);
     opacity: 0;
-    transition: transform 6s ease-out 0s, opacity 2s ease 0s;
+    transition: transform 4s ease-out 0s, opacity 2s ease 0s;
 }
 
 .active-slide {
     transform: scale(1.1);
     opacity: 1;
-    transition: transform 7000ms ease-out, opacity 2000ms ease;
+    transition: transform 5000ms ease-out, opacity 2000ms ease;
+    z-index: 20;
 }
 
 
@@ -2203,6 +2205,176 @@
         line-height: 45px;
     }
 }
+/***********************************
+************* section9 ************
+***********************************/
+.section9{
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #0E0D0C;
+}
+.section9-main{
+    display:grid;
+    grid-template-columns: 1fr 1.1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 0px;
+}
+.section9-left-right{
+    display: block;
+    width: 100%;
+}
+.section9-left-right-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 370px;
+    width: 100%;
+    padding: 30px 25px;
+    box-sizing: border-box;
+}
+
+
+.section9-left-right-info h4,.section9-midle-info h4 {
+    font-family: $font-en-secondery1;
+    color: $color-primary;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 20px !important;
+}
+
+.section9-left-right-info h2,.section9-midle-info h2 {
+    color: rgb(255 255 255 / 95%);
+    ;
+    font-family: $font-en-primary;
+    font-weight: 400;
+    font-size:30px;
+    text-transform: capitalize;
+    line-height: 36px;
+    letter-spacing: 2px;
+    max-width: 800px;
+    width: 100%;
+    margin: auto !important;
+    margin-bottom: 15px !important;
+}
+.section9-left-right-info p,.section9-midle-info p{
+    color: $color-one;
+    font-family: $font-en-secondery1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 25px!important;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.section9-left-right-img{
+    display: block;
+    width: 100%;
+    height:370px;
+}
+.section9-left-right-img img{
+    height: 370px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.section9-left-right-info a,.section9-midle-info a {
+    color: $color-primary;
+    font-family: $font-en-secondery1;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+    display: inline-block;
+    transition: all 0.2s linear;
+}
+
+.section9-left-right-info a::after,.section9-midle-info a::after {
+    width: 100%;
+    height: 3px;
+    content: "";
+    border-top: 1px solid $color-primary;
+    border-bottom: 1px solid $color-primary;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: all 0.2s linear;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.section9-left-right-info a:hover::after,.section9-midle-info a:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+}
+.section9-midle{
+    display: block;
+    position: relative;
+    background-image: url(./../../../assets/images/temp/banner/featured-2.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-position: center;
+}
+.section9-midle-info{
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgb(0 0 0 / 10%);
+    text-align: center;
+}
+@media(max-width:990px){
+    .section9-main{
+        grid-template-columns: 1fr 1.1fr;
+    }
+    .section9-main .section9-left-right:nth-child(3){
+       grid-column-start: 1;
+       grid-column-end: -1;
+       grid-row-start: 2;
+    }
+}
+@media(max-width:770px){
+    .section9-main{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 20px;
+    }
+    .section9-midle{
+        height: 350px;
+    }
+    .section9-midle-info{
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(0 0 0 / 50%);
+        grid-row-start: 2;
+    }
+    .section9-left-right-img{
+        height: 330px;
+        img{
+            height: 330px;
+        }
+    }
+    .section9-left-right-info{
+        height: 300px;
+    }
+}
+
+/***********************************
+************* section9-end ************
+***********************************/
 
 /***********************************
 ************* section10 ************

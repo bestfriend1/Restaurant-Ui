@@ -35,12 +35,27 @@ export class HomeComponent implements OnInit {
     /**
      * Auto Play Slide 
      */
-    if(window.innerWidth < 600){
+    if (window.innerWidth < 600) {
       setInterval(() => {
         this.nextSlide();
-      },5000);
+      }, 7000);
     }
-   
+
+    // if (window.innerWidth < 600) {
+    //   window.onmousedown = (e) => {
+    //     console.log(e);
+    //     let firstX = e.pageX;
+    //     let lastX = 0;
+    //     if (firstX > 0 && firstX > lastX) {
+    //       this.nextSlide();
+    //     } else {
+    //       this.prevSlide();
+    //     }
+    //     lastX = e.pageX;
+    //   }
+    // }
+
+
   }
 
   /***
@@ -100,7 +115,7 @@ export class HomeComponent implements OnInit {
       }
     })
   }
-  
+
 
 }
 
