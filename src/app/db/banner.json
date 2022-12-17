@@ -1,0 +1,28 @@
+{
+    "data":[
+        {
+            "_id":"1",
+            "bannerImg":"./assets/images/temp/banner/slider-1.jpg",
+            "bannerTitle":"Flavors Inspired by the Seasons",
+            "routerLink":"#",
+            "bannerDescription":"Come with family & feel the joy of mouthwatering food.",
+            "bannerSubTitle":"Delightful Experience"
+        },
+        {
+            "_id":"2",
+            "bannerImg":"./assets/images/temp/banner/slider-3.jpg",
+            "bannerTitle":"For the love of  delicious food",
+            "routerLink":"#",
+            "bannerDescription":"Come with family & feel the joy of mouthwatering food",
+            "bannerSubTitle":"Tradational & Hygine"
+        },
+        {
+            "_id":"3",
+            "bannerImg":"./assets/images/temp/banner/slider-2.jpg",
+            "bannerTitle":"Where every flavor tells a story",
+            "routerLink":"#",
+            "bannerDescription":"Come with family & feel the joy of mouthwatering food.",
+            "bannerSubTitle":"amazing & delicious"
+        }
+    ]
+}
