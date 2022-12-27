@@ -35,12 +35,10 @@ export class HomeComponent implements OnInit {
     /**
      * Auto Play Slide 
      */
-    if (window.innerWidth < 600) {
       setInterval(() => {
         this.nextSlide();
-      }, 7000);
-    }
-
+      }, 8000);
+      
     // if (window.innerWidth < 600) {
     //   window.onmousedown = (e) => {
     //     console.log(e);
@@ -73,8 +71,13 @@ export class HomeComponent implements OnInit {
 
   // @HostListener('window:scroll')
   // onBgParrallaxEffect(){
-  //   let scrollY = (window.scrollY / 100) ;
-  //    this.bgParallex.nativeElement.style.backgroundPosition = `center ${scrollY}%`;
+  //    let y = (window.scrollY - this.bgParallex.nativeElement.offsetTop) *0.2 ;
+  //    if(window.scrollY + 200 > this.bgParallex.nativeElement.offsetTop){
+  //     this.bgParallex.nativeElement.style.backgroundPosition = `${50}% ${-(y)}px`;
+  //    }else{
+  //     this.bgParallex.nativeElement.style.backgroundPosition = `${50}% ${50}%`;
+  //    }
+  
   // }
 
   /**

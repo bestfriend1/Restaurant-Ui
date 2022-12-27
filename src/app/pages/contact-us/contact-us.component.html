@@ -1,0 +1,113 @@
+<div class="banner-section">
+    <!--banner-start-->
+    <div class="banner-area">
+        <div class="container">
+            <div class="banner-main">
+                <div class="banner-top">
+                    <h4>ANY QUERY ?</h4>
+                    <img src="./assets/images/brand/svg/separator.svg" alt="">
+                </div>
+                <div class="banner-title">
+                    <div class="banner-title-main">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--banner-end-->
+</div>
+
+<div class="section1">
+    <div class="section1-main">
+        <div class="map-area">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81392.11276571127!2d-74.03116502768826!3d40.70144849986174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1667928043843!5m2!1sen!2sin"
+                style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+<!---section2-->
+<div class="section2">
+    <div class="container">
+        <div class="section2-main">
+            <div class="section2-info">
+                <h2>Lunch Time</h2>
+                <p>Monday to Sunday</p>
+                <p>11.00 am - 2.30pm</p>
+            </div>
+            <div class="section2-info">
+                <h2>Contact Info</h2>
+                <p>Restaurant St, Delici City, London 9578, UK</p>
+                <p>Email : booking@domainname.com</p>
+                <a href="tel:+88-123-123456">Booking : +88-123-123456</a>
+            </div>
+            <div class="section2-info">
+                <h2>Dinner Time</h2>
+                <p>Monday to Sunday</p>
+                <p>5.30 pm - 11.30 pm</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---section3-->
+<div class="section3">
+    <div class="container">
+        <div class="section3-main">
+            <!---section3-left-->
+            <div class="section3-left">
+                <div class="section3-title">
+                    <h2>Message us</h2>
+                    <p>Have a question about the our service? We're here to help, contact us today</p>
+                </div>
+                <div class="section3-left-form">
+                    <form (ngSubmit)="onSubmit()" [formGroup]="formData">
+
+                        <div class="form-field">
+                            <div class="form-input">
+                                <input type="text" placeholder="Your Name" value="" required formControlName="userName">
+                            </div>
+                            <span *ngIf="formData.get('userName')?.touched && formData.get('userName')?.invalid">This field is required</span>
+                        </div>
+                        <div class="form-field">
+                            <div class="form-input">
+                                <input type="email" placeholder="Your Email" value="" required formControlName="userEmail">
+                            </div>
+                            <span *ngIf="formData.get('userEmail')?.touched && formData.get('userEmail')?.invalid">This field is required</span>
+                        </div>
+                        
+                        <div class="form-field">
+                            <div class="form-input">
+                                <input type="text" value="" placeholder="Phone Number" required formControlName="phoneNumber">
+                            </div>
+                            <span *ngIf="formData.get('phoneNumber')?.touched && formData.get('phoneNumber')?.invalid">This field is required</span>
+                        </div>
+                        <div class="form-field">
+                            <div class="form-input text-area">
+                                <textarea name="" id="" placeholder="Special Request" cols="10" rows="6" required formControlName="userReq"></textarea>
+                            </div>
+                            <span *ngIf="formData.get('userReq')?.touched && formData.get('userReq')?.invalid">This field is required</span>
+                        </div>
+                        <div class="form-sub-btn">
+                            <button class="btn" type="submit">Send Your Message</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+            <!---section3-right-->
+            <div class="section3-right">
+                <div class="section3-right-img" style="height: auto;">
+                    <img src="./assets/images/temp/image/restaurant.png" alt="" style="height: auto;">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

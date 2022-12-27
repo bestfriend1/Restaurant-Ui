@@ -1,0 +1,205 @@
+<div class="banner-section">
+    <!--banner-start-->
+    <div class="banner-area">
+          <div class="container">
+                <div class="banner-main">
+                      <div class="banner-top">
+                            <h4>DELICIOUS & AMAZING</h4>
+                            <img src="./assets/images/brand/svg/separator.svg" alt="">
+                      </div>
+                      <div class="banner-title">
+                            <div class="banner-title-main">
+                                  <h2>Our Menu List</h2>
+                            </div>
+                      </div>
+                </div>
+          </div>
+    </div><!--banner-end-->
+
+</div>
+
+
+<!-------------------------------------------section1----------------------------------------------->
+<div class="section1">
+    <div class="container">
+          <div class="section1-title">
+                <h4>SPECIAL SELECTION</h4>
+                <img src="./assets/images/brand/svg/separator.svg" alt="">
+                <h2>Delicious Menu</h2>
+          </div>
+          <div class="section1-main">
+                <div class="section1-filter">
+                      <ul>
+                            <li><button class="active">Morning</button></li>
+                            <li><button>Weekday Lunch</button></li>
+                            <li><button>Dinner</button></li>
+                            <li><button>Wines</button></li>
+                      </ul>
+                </div>
+
+                <div class="menu-area">
+                      <!------------------menu--------------------->
+                      <div class="menu-card" *ngFor="let menu of menuDataArr" [id]="menu?._id">
+                            <div class="menu-card-img">
+                                  <img [src]="menu?.menuImage" [alt]="menu?.menuName">
+                            </div>
+                            <div class="menu-card-body">
+                                  <div class="menu-title">
+                                        <div class="menu-title-left">
+                                              <div>
+                                                    <h3>{{menu?.menuName}}</h3>
+                                              </div>
+                                              <div *ngIf="menu?.menuTag">
+                                                    <span>{{menu?.menuTag}}</span>
+                                              </div>
+                                        </div>
+                                        <div class="menu-title-right">
+                                              <div class="menu-price">
+                                                    <span>{{menu?.menuPrice}}</span>
+                                              </div>
+                                        </div>
+                                  </div>
+                                  <div class="menu-card-des">
+                                        <p>{{menu?.menuDescription}}</p>
+                                  </div>
+                            </div>
+                      </div>
+                </div>
+          </div>
+
+          <div class="section1-btn-area">
+                <h3>During winter daily from <span>7:00 pm</span> to <span>9:00 pm</span></h3>
+          </div>
+    </div>
+    <!--shape-->
+    <div class="section1-shape1">
+          <img src="./assets/images/brand/png/bg-5.png" alt="">
+    </div>
+    <div class="section1-shape2">
+          <img src="./assets/images/brand/png/bg-6.png" alt="">
+    </div>
+</div>
+
+<!---section2-->
+<div class="section2">
+    <div class="container">
+          <div class="section2-main">
+                <!---section2-left-->
+                <div class="section2-left">
+                      <div class="section2-title">
+                            <h2>Online Reservation</h2>
+                            <p>Booking request <a href="tel:+88-123-123456">+88-123-123456</a> or fill out the
+                                  orderform</p>
+                      </div>
+                      <div class="section2-left-form">
+                            <form action="#">
+                                  <div class="grid-2">
+                                        <div class="form-input">
+                                              <input type="text" value="" required>
+                                              <span>Your Name</span>
+                                        </div>
+                                        <div class="form-input">
+                                              <input type="text" value="" required>
+                                              <span>Phone Number</span>
+                                        </div>
+                                  </div>
+
+                                  <div class="grid-3">
+                                        <div class="input-box-area">
+                                              <div class="input-box">
+                                                    <div class="input-box-left">
+                                                          <div class="input-icon">
+                                                                <span><i class="fa fa-user"></i></span>
+                                                          </div>
+                                                          <div class="input-box-text">
+                                                                <h4>2 Person</h4>
+                                                          </div>
+                                                    </div>
+                                                    <div class="input-box-right">
+                                                          <div class="down-arrow">
+                                                                <span><i class="fa fa-angle-down"></i></span>
+                                                          </div>
+                                                    </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="input-box-area">
+                                              <div class="input-box">
+                                                    <div class="input-box-left">
+                                                          <div class="input-icon">
+                                                                <span><i class="fa fa-calendar"></i></span>
+                                                          </div>
+                                                          <div class="input-box-text">
+                                                                <h4>DD-MM-YYYY</h4>
+                                                          </div>
+                                                    </div>
+                                                    <div class="input-box-right">
+                                                          <div class="down-arrow">
+                                                                <span><i class="fa fa-angle-down"></i></span>
+                                                          </div>
+                                                    </div>
+                                              </div>
+
+                                        </div>
+
+                                        <div class="input-box-area">
+                                              <div class="input-box">
+                                                    <div class="input-box-left">
+                                                          <div class="input-icon">
+                                                                <span><i class="fa fa-clock"></i></span>
+                                                          </div>
+                                                          <div class="input-box-text">
+                                                                <h4>08:00am</h4>
+                                                          </div>
+                                                    </div>
+                                                    <div class="input-box-right">
+                                                          <div class="down-arrow">
+                                                                <span><i class="fa fa-angle-down"></i></span>
+                                                          </div>
+                                                    </div>
+                                              </div>
+
+                                        </div>
+                                  </div>
+
+                                  <div class="form-input text-area">
+                                        <textarea name="" id="" cols="10" rows="8" required></textarea>
+                                        <span>Message</span>
+                                  </div>
+                                  <div class="form-sub-btn">
+                                        <button class="btn" style="width: 100%;">BOOK A Table</button>
+                                  </div>
+
+
+                            </form>
+                      </div>
+                </div>
+                <!---section2-right-->
+                <div class="section2-right">
+                      <div class="section2-contact-info">
+                            <div class="contact-title">
+                                  <h2>Contact Us</h2>
+                            </div>
+                            <div class="contact-number">
+                                  <h4>Booking Request</h4>
+                                  <a href="tel:+88-123-123456">+88-123-123456</a>
+                            </div>
+                            <div class="contact-other-info">
+                                  <h4>Location</h4>
+                                  <p>Restaurant St, Delicious City, <br> London 9578, UK</p>
+                            </div>
+                            <div class="contact-other-info">
+                                  <h4>Lunch Time</h4>
+                                  <p>Monday to Sunday <br> 11.00 am - 2.30pm</p>
+                            </div>
+                            <div class="contact-other-info">
+                                  <h4>Dinner Time</h4>
+                                  <p>Monday to Sunday <br> 05.00 pm - 10.00pm</p>
+                            </div>
+                      </div>
+                </div>
+
+          </div>
+    </div>
+</div>
