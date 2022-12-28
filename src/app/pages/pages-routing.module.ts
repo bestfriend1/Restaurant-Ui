@@ -26,6 +26,10 @@ const routes: Routes = [
       {
         path:"contact-us",
         loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+      },
+      {
+        path:"book-table",
+        loadChildren: () => import('./reservation-table/reservation-table.module').then(m => m.ReservationTableModule)
       }
     ]
   }
