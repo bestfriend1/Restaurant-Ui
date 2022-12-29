@@ -372,8 +372,8 @@
     background-image: url(../../../assets/images/brand/png/pattern-2.png);
     height: 100%;
     width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-repeat: no-repeat;
+    // background-size: cover;
     background-color: $color-five;
     position: relative;
 }
@@ -583,4 +583,76 @@
      100%{
         transform: rotate(360deg) scale(1);
      }
+}
+
+/*** responsive code ****/
+@media(max-width:1200px){
+    .main-shape1{
+        display: none;
+    }
+    .main-shape2{
+        display: none;
+    }
+    .section3-main{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+    }
+    .section3{
+        margin-top: 0px!important;
+    }
+}
+@media(max-width:1000px){
+    .grid-3{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-3 .input-box-area:nth-child(3){
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .grid-3 .book-btn{
+        grid-column-start: 1;
+        grid-column-end: -1;
+    }
+    .section2-main{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 60px;
+    }
+    .section2-left{
+        padding: 0px;
+    }
+    .section2{
+        margin-bottom: 100px;
+        margin-top: 0px;
+    }
+    .section1-title h2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+}
+@media(max-width:700px){
+    .section3-main{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact-title h2{
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .contact-title{
+        margin-bottom: 25px;
+    }
+    .grid-3{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .section1-title h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .section1-title p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .main-area{
+        padding: 70px 15px;
+    }
+
 }

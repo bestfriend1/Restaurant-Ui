@@ -30,6 +30,10 @@ const routes: Routes = [
       {
         path:"book-table",
         loadChildren: () => import('./reservation-table/reservation-table.module').then(m => m.ReservationTableModule)
+      },
+      {
+        path:"about-us",
+        loadChildren: () => import('./about-us/about-us.module').then(m => m.AboutUsModule)
       }
     ]
   }

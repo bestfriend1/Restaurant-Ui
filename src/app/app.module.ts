@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SwiperModule } from 'swiper/angular';
 import { HttpClientModule } from '@angular/common/http';
+import { LoaderModule } from './shared/ui/loader/loader.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     SwiperModule,
-    HttpClientModule
+    HttpClientModule,
+    LoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

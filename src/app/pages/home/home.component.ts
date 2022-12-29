@@ -1,6 +1,7 @@
 import { Component, HostListener, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CarouselControllService } from '../../services/carousel-controll.service';
 import { ApiHandleService } from '../../services/common/api-handle.service';
+import { NgxLoaderService } from '../../services/common/ngx-loader.service';
 let offerData = require('../../db/offer-data.json');
 let menuData = require('../../db/menu-data.json');
 let product = require('./../../db/products.json');
@@ -25,7 +26,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private carouselControll: CarouselControllService,
-    private apiService: ApiHandleService
+    private apiService: ApiHandleService,
+    private ngxLoader : NgxLoaderService
   ) {
 
   }
@@ -109,12 +111,12 @@ export class HomeComponent implements OnInit {
    * getAllProduct();
    */
   getAllProduct() {
+    this.ngxLoader.onShowLoader();
     this.apiService.getAllProduct().subscribe((res) => {
       if (res) {
         this.productArr = res;
         console.log(this.productArr);
-      } else {
-        console.log('res not available');
+        this.ngxLoader.onHideLoader();
       }
     })
   }
