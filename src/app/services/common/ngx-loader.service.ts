@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class NgxLoaderService {
 
-  loader = true;
+  loader = false;
 
   constructor() { }
   /**
