@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { ApiHandleService } from '../../services/common/api-handle.service';
+import { NgxLoaderService } from '../../services/common/ngx-loader.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -10,15 +12,21 @@ import { Observable } from 'rxjs';
 export class ContactUsComponent implements OnInit {
   //FORM VARIABLESS
   formData!: FormGroup;
+  users: any;
+  usersId: any;
+
 
   constructor(
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private apiHandle: ApiHandleService,
+    private ngxLoader: NgxLoaderService
   ) {
 
   }
 
   ngOnInit(): void {
     this.formInit();
+    this.getAllUser();
   }
 
 
@@ -31,7 +39,7 @@ export class ContactUsComponent implements OnInit {
   formInit() {
     this.formData = this.fb.group({
       userName: [null, Validators.required],
-      userEmail:  [null, [Validators.required, Validators.email]],
+      userEmail: [null, [Validators.required, Validators.email]],
       phoneNumber: [null, Validators.required],
       userReq: [null, Validators.required]
     })
@@ -39,31 +47,48 @@ export class ContactUsComponent implements OnInit {
 
   onSubmit() {
     if (this.formData.valid) {
-      console.log(this.formData.value);
+      this.ngxLoader.onShowLoader();
+      this.apiHandle.addUser(this.formData.value).subscribe((res) => {
+        if (res) {
+          this.ngxLoader.onHideLoader();
+          this.formInit();
+          this.getAllUser()
+        }
+      },
+        (err) => {
+          if (err) {
+            console.log(err);
+            this.ngxLoader.onHideLoader();
+          }
+        }
+      )
     } else {
-      let formControl = this.formData.controls;
-      let controls = Object.keys(formControl);
-      controls.forEach((value) => {
-        this.formData.controls[value].markAsTouched();
-      });
+      this.formData.markAllAsTouched();
     }
   };
 
 
-  // async validation
-  naEmail(control:FormControl):Promise <any> | Observable <any>{
-    const res = new Promise <any>((resolve,reject) => {
-      setTimeout(() => {
-         if(control.value == 'autanber111@gmail.com'){
-          resolve({'emailAsyncError':true})
-         }else{
-          resolve(null);
-         }
-      },2000);
-    })
-    return res;
+  //HTTP REQUEST HANDLE
+  getAllUser() {
+    this.ngxLoader.onShowLoader();
+    this.apiHandle.getAllUser().subscribe((res) => {
+      if (res) {
+        this.users = Object.values(res);
+        this.usersId = Object.keys(res);
+        // console.log(this.users);
+        this.ngxLoader.onHideLoader();
+      }else{
+        this.ngxLoader.onHideLoader();
+      }
+    },
+      (err) => {
+        if (err) {
+          // console.log(err);
+          this.ngxLoader.onHideLoader();
+        }
+      }
+    )
   }
-
 
 
 

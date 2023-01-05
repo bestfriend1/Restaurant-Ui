@@ -262,7 +262,7 @@
                     <div class="service-img">
                         <img src="./assets/images/brand/png/s-icon-4.png" alt="">
                     </div>
-                    <div class="service-body" >
+                    <div class="service-body">
                         <h3>Banquets Hall</h3>
                         <p>Lorem Ipsum is simply dummy printing and typeset industry lorem Ipsum has been.</p>
                     </div>
@@ -275,4 +275,171 @@
     <div class="shape3">
         <img src="./assets/images/brand/png/bg-15.png" alt="">
     </div>
+</div>
+
+<!---section4-->
+<div class="section4">
+    <div class="container">
+        <div class="section3-title">
+            <h4>TESTIMONIALS</h4>
+            <img src="./assets/images/brand/svg/separator.svg" alt="">
+            <h2>What People Are Saying</h2>
+        </div>
+        <!---section4-main-->
+        <div class="section4-main">
+
+            <swiper [slidesPerView]="1" [spaceBetween]="20" [loop]="true" [grabCursor]="true" [autoplay]="true"
+                [breakpoints]="{
+                  '600': {
+                    slidesPerView: 1
+                  },
+                  '760': {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                  },
+                  '1200': {
+                     slidesPerView: 3,
+                     spaceBetween: 50
+                  }
+            }" class="mySwiper">
+                <ng-template swiperSlide *ngFor="let data of [1,2,3,4,5,6]">
+                    <div class="author-card">
+                        <div class="author-card-description">
+                            <div class="ratting">
+                                <ul>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <div class="author-description">
+                                <p>Hygienic food & fresh enviroment, everyone had a wonderful delite experience. It was
+                                    FABULOUS! great experience at The Italian gourmet.</p>
+                            </div>
+                        </div>
+                        <div class="author-info">
+                            <div class="author-img">
+                                <img src="./assets/images/temp/author/author-thumb-5.jpg" alt="">
+                            </div>
+                            <div class="author-title">
+                                <h3>Theresa Tin</h3>
+                                <span>Chicago</span>
+                            </div>
+                        </div>
+                    </div>
+                </ng-template>
+            </swiper>
+
+        </div>
+    </div>
+</div>
+<!--section5-->
+<div class="section5">
+    <div class="container">
+        <div class="section3-title">
+            <h4>WHY CHOOSE US</h4>
+            <img src="./assets/images/brand/svg/separator.svg" alt="">
+            <h2>Our Strength</h2>
+        </div>
+        <!--section5-main-->
+        <div class="section5-main">
+            <div class="feature-card">
+                <div class="feature-img-img">
+                    <img src="./assets/images/temp/image/featured-4.jpg" alt="">
+                </div>
+                <div class="feature-body">
+                    <div class="feature-icon">
+                        <img src="./assets/images/brand/png/why-icon-1.png" alt="">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Hygienic Food</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-img-img">
+                    <img src="./assets/images/temp/image/featured-5.jpg" alt="">
+                </div>
+                <div class="feature-body">
+                    <div class="feature-icon">
+                        <img src="./assets/images/brand/png/why-icon-2.png" alt="">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Fresh Environment</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-img-img">
+                    <img src="./assets/images/temp/image/featured-6.jpg" alt="">
+                </div>
+                <div class="feature-body">
+                    <div class="feature-icon">
+                        <img src="./assets/images/brand/png/why-icon-3.png" alt="">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Skilled Chefs</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-img-img">
+                    <img src="./assets/images/temp/image/featured-7.jpg" alt="">
+                </div>
+                <div class="feature-body">
+                    <div class="feature-icon">
+                        <img src="./assets/images/brand/png/why-icon-4.png" alt="">
+                    </div>
+                    <div class="feature-text">
+                        <h3>Event & Party</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!---section6 -->
+<div class="section6">
+    <div class="section6-main">
+        <swiper 
+        [slidesPerView]="1" 
+        [spaceBetween]="40" 
+        [navigation]="true" 
+        [grabCursor]="true" 
+        [autoplay]="true"
+            [breakpoints]="{
+          '600': {
+            slidesPerView: 1
+          },
+          '1000': {
+            slidesPerView: 1.6
+          },
+          '1150': {
+            slidesPerView: 2
+          },
+          '1350': {
+            slidesPerView: 2.3
+         },
+          '1450': {
+             slidesPerView: 2.7
+          }
+    }" class="mySwiper">
+            <ng-template swiperSlide *ngFor="let gData of  galleryData; let i = index" >
+                <div class="galler-area" (click)="onShowGallery(i)" [id] ="gData?._id">
+                    <div class="gallery-img">
+                        <img [src]="gData?.galleryImage" alt="">
+                    </div>
+                </div>
+            </ng-template>
+        </swiper>
+    </div>
+</div>
+
+<div class="galler-pop">
+     <app-gallery [galleryData]="galleryData"  #gallery></app-gallery>
 </div>
