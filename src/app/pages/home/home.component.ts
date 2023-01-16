@@ -1,6 +1,5 @@
 import { Component, HostListener, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CarouselControllService } from '../../services/carousel-controll.service';
-import { ApiHandleService } from '../../services/common/api-handle.service';
 import { NgxLoaderService } from '../../services/common/ngx-loader.service';
 let offerData = require('../../db/offer-data.json');
 let menuData = require('../../db/menu-data.json');
@@ -20,19 +19,17 @@ export class HomeComponent implements OnInit {
    **/
   offerDataArr = offerData.offerData;
   menuDataArr = menuData?.data;
-  productArr: any;
+  productArr = product?.data;
   bannerDataArr = bannerData?.data;
   slideIndex = 0;
 
   constructor(
     private carouselControll: CarouselControllService,
-    private apiService: ApiHandleService,
     private ngxLoader : NgxLoaderService
   ) {
 
   }
   ngOnInit(): void {
-    this.getAllProduct();
     this.slideShow(this.slideIndex);
     /**
      * Auto Play Slide 
@@ -41,19 +38,6 @@ export class HomeComponent implements OnInit {
         this.nextSlide();
       }, 8000);
       
-    // if (window.innerWidth < 600) {
-    //   window.onmousedown = (e) => {
-    //     console.log(e);
-    //     let firstX = e.pageX;
-    //     let lastX = 0;
-    //     if (firstX > 0 && firstX > lastX) {
-    //       this.nextSlide();
-    //     } else {
-    //       this.prevSlide();
-    //     }
-    //     lastX = e.pageX;
-    //   }
-    // }
 
 
   }
@@ -89,6 +73,7 @@ export class HomeComponent implements OnInit {
    * slideShow()
    * autoPlaySlide()
    */
+
   slideShow(s: any) {
     // condition slide controll with indicator
     if (s > this.bannerDataArr.length - 1) {
@@ -106,20 +91,6 @@ export class HomeComponent implements OnInit {
     this.slideShow(this.slideIndex = this.slideIndex - 1);
   }
 
-  /**
-   * HTTP REQUEST HANLDE
-   * getAllProduct();
-   */
-  getAllProduct() {
-    this.ngxLoader.onShowLoader();
-    this.apiService.getAllProduct().subscribe((res) => {
-      if (res) {
-        this.productArr = res;
-        console.log(this.productArr);
-        this.ngxLoader.onHideLoader();
-      }
-    })
-  }
 
 
 }

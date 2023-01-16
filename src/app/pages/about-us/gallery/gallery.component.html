@@ -1,3 +1,43 @@
-<div class="gallery-area" *ngIf="onShow == true">
-      
+<div class="gallery-area" *ngIf="onShow == true" #fullScreen>
+    <div class="gallery-main-area">
+          <!---gallery-left-->
+          <div class="gallery-left">
+                 <div class="gallery-top">
+                       <div class="slide-index-number">
+                           <span>{{indexNo+1}} / {{galleryData.length}}</span>
+                       </div>
+                       <div class="gallery-top-right">
+                             <ul>
+                                  <li><span (click)="onAutoPlayToggle()"><i class="fa fa-play"></i></span></li>
+                                  <li><span (click)="onFullScreen()"><i class="fa-solid fa-expand"></i></span></li>
+                                  <li><span><i class="fa fa-bars"></i></span></li>
+                                  <li><span><i class="fa-solid fa-share"></i></span></li>
+                                  <li><span (click)="onHideGallery() "><i class="fa fa-xmark"></i></span></li>
+                             </ul>
+                       </div>
+                 </div>
+                 <!---slide-->
+                 <div class="slide-area">
+                      <div class="slide" *ngFor="let gData of galleryData; index as i" [id] = "gData?._id"  [class]="indexNo == i ? 'active-slide':'inactive-slide'">
+                            <img [src]="gData?.galleryImage" alt="">
+                      </div>
+                 </div>
+
+                 <!---slide-indicater-->
+                 <div class="slide-indicator">
+                      <ul> 
+                         <li class="prev"><span (click)="prevSlide()"><i class="fa fa-arrow-left"></i></span></li>
+                         <li class="next"><span (click)="nextSlide()"><i class="fa fa-arrow-right"></i></span></li> 
+                      </ul>
+                 </div>
+          </div>
+
+          <div class="gallery-right">
+                 <div class="galler-right-main">
+                       <div class="gallery-image" *ngFor="let gData of galleryData; index as i" [id] = "gData?._id" (click)="selectGalleryImg(i)" [class]="indexNo == i ? 'active-gl':'inactive-gl'">
+                            <img [src]="gData?.galleryImage" alt="">
+                       </div>
+                 </div>
+          </div>
+    </div>
 </div>

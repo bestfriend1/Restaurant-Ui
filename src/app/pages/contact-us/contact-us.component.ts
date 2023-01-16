@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { ApiHandleService } from '../../services/common/api-handle.service';
 import { NgxLoaderService } from '../../services/common/ngx-loader.service';
 
 @Component({
@@ -18,7 +17,6 @@ export class ContactUsComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private apiHandle: ApiHandleService,
     private ngxLoader: NgxLoaderService
   ) {
 
@@ -26,7 +24,6 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit(): void {
     this.formInit();
-    this.getAllUser();
   }
 
 
@@ -47,48 +44,13 @@ export class ContactUsComponent implements OnInit {
 
   onSubmit() {
     if (this.formData.valid) {
-      this.ngxLoader.onShowLoader();
-      this.apiHandle.addUser(this.formData.value).subscribe((res) => {
-        if (res) {
-          this.ngxLoader.onHideLoader();
-          this.formInit();
-          this.getAllUser()
-        }
-      },
-        (err) => {
-          if (err) {
-            console.log(err);
-            this.ngxLoader.onHideLoader();
-          }
-        }
-      )
+       console.log(this.formData.value);
     } else {
       this.formData.markAllAsTouched();
     }
   };
 
 
-  //HTTP REQUEST HANDLE
-  getAllUser() {
-    this.ngxLoader.onShowLoader();
-    this.apiHandle.getAllUser().subscribe((res) => {
-      if (res) {
-        this.users = Object.values(res);
-        this.usersId = Object.keys(res);
-        // console.log(this.users);
-        this.ngxLoader.onHideLoader();
-      }else{
-        this.ngxLoader.onHideLoader();
-      }
-    },
-      (err) => {
-        if (err) {
-          // console.log(err);
-          this.ngxLoader.onHideLoader();
-        }
-      }
-    )
-  }
 
 
 
