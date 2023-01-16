@@ -161,7 +161,7 @@
 .gallery-image{
     display: block;
     width: 100%;
-    border: 2px solid transparent;
+    border:4px solid transparent;
     &.active-gl{
          border-color: #4ea7f9;
     }
@@ -170,8 +170,8 @@
     }
 }
 .gallery-image img{
-    min-width: 95px;
     height: 70px;
+    width: 100%;
     object-fit: cover;
 }
 

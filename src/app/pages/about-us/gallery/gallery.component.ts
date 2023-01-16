@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { ReloadService } from '../../../services/common/reload.service';
 
 @Component({
   selector: 'app-gallery',
@@ -12,12 +13,21 @@ export class GalleryComponent implements OnInit {
   onShow = false;
   onAutoPlay = false;
 
-  constructor() {
+  constructor(
+    private reloadService: ReloadService
+  ) {
 
   }
+
   ngOnInit(): void {
-    this.onAutoPlayControl();
+    this.reloadService.refreshAutoplay$.subscribe((res) => {
+      if(res === true){
+        this.onAutoPlayControl();
+      }
+    })
   }
+
+  
   //ALL GALLERY METHOD 
   /**
    * onShowGallery();
@@ -62,6 +72,7 @@ export class GalleryComponent implements OnInit {
 
   onAutoPlayToggle() {
     this.onAutoPlay = !this.onAutoPlay;
+    this.reloadService.needRefreshAutoPlay$(this.onAutoPlay);
   }
 
   onFullScreen() {
@@ -84,7 +95,7 @@ export class GalleryComponent implements OnInit {
         if (this.indexNo == this.galleryData.length) {
           this.indexNo = 0;
         }
-      }, 2000);
+      }, 3000);
     } else {
       this.indexNo = lastIndex;
     }

@@ -8,7 +8,7 @@
                        </div>
                        <div class="gallery-top-right">
                              <ul>
-                                  <li><span (click)="onAutoPlayToggle()"><i class="fa fa-play"></i></span></li>
+                                  <li><span (click)="onAutoPlayToggle()"><i [class]="onAutoPlay == true ? 'fa fa-pause':'fa fa-play'"></i></span></li>
                                   <li><span (click)="onFullScreen()"><i class="fa-solid fa-expand"></i></span></li>
                                   <li><span><i class="fa fa-bars"></i></span></li>
                                   <li><span><i class="fa-solid fa-share"></i></span></li>
