@@ -365,6 +365,17 @@
     display: block;
     position: relative;
 }
+.form-input label{
+    color: #fff;
+    font-family: $font-en-primary;
+    font-style: normal;
+    font-weight: 400;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: $color-six;
+}
 
 .form-input span {
     position: absolute;
@@ -410,6 +421,8 @@
 .form-input textarea:focus {
     border-color: $color-primary;
 }
+
+
 
 .text-area span {
     top: 20px;

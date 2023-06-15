@@ -53,8 +53,6 @@
         </div>
     </div>
 </div>
-
-
 <!---section3-->
 <div class="section3">
     <div class="container">
@@ -70,7 +68,8 @@
 
                         <div class="form-field">
                             <div class="form-input">
-                                <input type="text" placeholder="Your Name" value="" required formControlName="userName">
+                                <input type="text"  value="" required formControlName="userName">
+                                <span>User Name</span>
                             </div>
                             <span *ngIf="formData.get('userName')?.touched && formData.get('userName')?.invalid">This field is required</span>
                         </div>

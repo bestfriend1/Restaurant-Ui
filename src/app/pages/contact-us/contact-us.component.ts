@@ -44,7 +44,7 @@ export class ContactUsComponent implements OnInit {
 
   onSubmit() {
     if (this.formData.valid) {
-       console.log(this.formData.value);
+      console.log(this.formData.value);
     } else {
       this.formData.markAllAsTouched();
     }

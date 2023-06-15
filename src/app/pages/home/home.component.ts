@@ -4,7 +4,7 @@ import { NgxLoaderService } from '../../services/common/ngx-loader.service';
 let offerData = require('../../db/offer-data.json');
 let menuData = require('../../db/menu-data.json');
 let product = require('./../../db/products.json');
-let bannerData = require('./../../db/banner.json')
+let bannerData = require('./../../db/banner.json');
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
